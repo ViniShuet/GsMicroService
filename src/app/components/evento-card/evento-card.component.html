@@ -1,0 +1,29 @@
+<!-- Formulário para criar eventos -->
+<form [formGroup]="eventoForm" (ngSubmit)="save()">
+  <p>
+    <label>Título:</label>
+    <input type="text" formControlName="titulo">
+  </p>
+  <p>
+    <label>Data:</label>
+    <input type="text" formControlName="data">
+  </p>
+  <p>
+    <label>Horário:</label>
+    <input type="text" formControlName="horario">
+  </p>
+  <p>
+    <label>Local:</label>
+    <input type="text" formControlName="local">
+  </p>
+  <button type="submit">Participar</button>
+</form>
+
+<div *ngFor="let evento of eventos" class="evento-card">
+  <h2>{{ evento.titulo }}</h2>
+  <p><strong>Data:</strong> {{ evento.data }}</p>
+  <p><strong>Horário:</strong> {{ evento.horario }}</p>
+  <p><strong>Local:</strong> {{ evento.local }}</p>
+</div>
+
+<p *ngIf="mensagemInscricao" class="mensagem">{{ mensagemInscricao }}</p>

@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { InspiracaoComponent } from './components/inspiracao/inspiracao.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
 import { ProgramacaoComponent } from './components/programacao/programacao.component';
+import { EventoCardComponent } from './components/evento-card/evento-card.component';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +19,12 @@ import { ProgramacaoComponent } from './components/programacao/programacao.compo
     HomeComponent,
     InspiracaoComponent,
     ParceirosComponent,
-    ProgramacaoComponent],
+    ProgramacaoComponent,
+    EventoCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'gsmicroservice';
+  
 }
