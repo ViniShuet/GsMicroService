@@ -1,1 +1,18 @@
-<p>home works!</p>
+<h1>Interpolação e Control Flow</h1>
+
+<button (click)="exibirInformacoes()">Global Solution (exiba)</button>
+
+@if (exibir == true) {
+  <h2>{{titulo}}</h2>
+  <h3>{{descricao}}</h3>
+  <h4>Data evento: {{dataEvento}}</h4>
+}@else {
+  <p>Esta como false</p>
+}
+
+<h2>For para Destaques</h2>
+<ul>
+  @for (item of destaques; track $index) {
+    <li>{{item}} - {{$index}}</li>
+  }
+</ul>
