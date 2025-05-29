@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Evento } from '../../interfaces/evento';
+import { HoverBorderDirective } from '../../diretiva/hover-border.directive'; 
 
 @Component({
   selector: 'app-programacao',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HoverBorderDirective],
   templateUrl: './programacao.component.html',
   styleUrls: ['./programacao.component.css']
 })
